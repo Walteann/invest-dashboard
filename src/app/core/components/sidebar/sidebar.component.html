@@ -1,0 +1,22 @@
+<aside>
+	<button id="close-btn">
+		<span class="material-icons-sharp"> close </span>
+	</button>
+
+	<div class="sidebar">
+		@for (menu of menuItem; track $index) {
+		<a href="#" [ngClass]="{ active: menu.active }">
+			<span class="material-icons-sharp"> {{ menu.icon }} </span>
+			<h4>{{ menu.name }}</h4>
+		</a>
+		}
+	</div>
+
+	<div class="updates">
+		<span class="material-icons-sharp"> update </span>
+		<h4>Atualização Disponível</h4>
+		<p>Security Updates</p>
+		<p>General Updates</p>
+		<a href="#">Atualize Agora</a>
+	</div>
+</aside>
