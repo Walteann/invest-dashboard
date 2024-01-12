@@ -1,5 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Chart, ChartItem, registerables } from 'chart.js';
+import { CryptorChartComponent } from '../../core/charts/cryptor-chart/cryptor-chart.component';
 
 interface CartCurrency {
 	iconCurrency: string;
@@ -18,12 +20,18 @@ interface MonthlyReport {
 	compared: string;
 }
 
+interface FastPayment {
+	name: string;
+	value: number;
+	color: string;
+}
+
 @Component({
-  selector: 'app-dashboard',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.css'
+	selector: 'app-dashboard',
+	standalone: true,
+	imports: [CommonModule, CryptorChartComponent],
+	templateUrl: './dashboard.component.html',
+	styleUrl: './dashboard.component.css',
 })
 export class DashboardComponent {
 	cartsCurrency: CartCurrency[] = [
@@ -34,7 +42,7 @@ export class DashboardComponent {
 			value: 320.42,
 			embossing: 'JOHN DOE',
 			expiryDate: '11/29',
-			cvv: 355
+			cvv: 355,
 		},
 		{
 			iconCurrency: 'ETH.png',
@@ -43,7 +51,7 @@ export class DashboardComponent {
 			value: 4565.88,
 			embossing: 'JOHN DOE',
 			expiryDate: '06/30',
-			cvv: 923
+			cvv: 923,
 		},
 		{
 			iconCurrency: 'EURO.png',
@@ -52,8 +60,8 @@ export class DashboardComponent {
 			value: 873.88,
 			embossing: 'JOHN DOE',
 			expiryDate: '05/28',
-			cvv: 384
-		}
+			cvv: 384,
+		},
 	];
 
 	monthlyReports: MonthlyReport[] = [
@@ -82,4 +90,44 @@ export class DashboardComponent {
 			compared: 'em comparação com 134,23 no mês passado',
 		},
 	];
+
+	fastPayments: FastPayment[] = [
+		{
+			name: 'Treino',
+			value: 50,
+			color: 'bg-primary',
+		},
+		{
+			name: 'Internet',
+			value: 90,
+			color: 'bg-danger',
+		},
+		{
+			name: 'Gás',
+			value: 95,
+			color: 'bg-purple',
+		},
+		{
+			name: 'Cinema',
+			value: 130,
+			color: 'bg-primary',
+		},
+		{
+			name: 'Educação',
+			value: 334,
+			color: 'bg-success',
+		},
+		{
+			name: 'Eletricidade',
+			value: 170,
+			color: 'bg-dark',
+		},
+		{
+			name: 'Comida',
+			value: 798,
+			color: 'bg-primary',
+		},
+	];
+
+
 }

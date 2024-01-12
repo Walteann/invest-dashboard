@@ -72,15 +72,19 @@
 			<div class="badge">
 				<span class="material-icons-sharp"> add </span>
 			</div>
+			@for(fast of fastPayments; track $index) {
 			<div class="badge">
-				<span class="bg-primary"></span>
+				<span [class]="fast.color"></span>
 				<div>
-					<h5>Treinamento</h5>
-					<h4>R$ 80,00</h4>
+					<h5>{{ fast.name }}</h5>
+					<h4>R$ {{ fast.value }}</h4>
 				</div>
 			</div>
+			}
 		</div>
 	</div>
+
+	<app-cryptor-chart></app-cryptor-chart>
 </section>
 
 <section class="right"></section>
