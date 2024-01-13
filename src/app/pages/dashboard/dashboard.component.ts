@@ -60,7 +60,7 @@ export class DashboardComponent {
 			value: 873.88,
 			embossing: 'JOHN DOE',
 			expiryDate: '05/28',
-			cvv: 384,
+			cvv: 384
 		},
 	];
 
@@ -87,7 +87,7 @@ export class DashboardComponent {
 			report: 'Turnover',
 			value: 120.42,
 			percent: -13.8,
-			compared: 'em comparação com 134,23 no mês passado',
+			compared: 'em comparação com 134,23 no mês passado'
 		},
 	];
 
@@ -125,7 +125,7 @@ export class DashboardComponent {
 		{
 			name: 'Comida',
 			value: 798,
-			color: 'bg-primary',
+			color: 'bg-primary'
 		},
 	];
 
