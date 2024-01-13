@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, ViewChild } from '@angular/core';
-import { Chart, ChartItem, registerables } from 'chart.js';
+import { Component} from '@angular/core';
 import { CryptorChartComponent } from '../../core/charts/cryptor-chart/cryptor-chart.component';
 
 interface CartCurrency {
@@ -128,6 +127,4 @@ export class DashboardComponent {
 			color: 'bg-primary'
 		},
 	];
-
-
 }
