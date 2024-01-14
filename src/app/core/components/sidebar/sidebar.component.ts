@@ -48,6 +48,6 @@ export class SidebarComponent {
 		{
 			name: 'Configurações',
 			icon: 'settings',
-		},
+		}
 	];
 }
