@@ -5,7 +5,7 @@
 
 	<div class="sidebar">
 		@for (menu of menuItem; track $index) {
-		<a href="#" [ngClass]="{ active: menu.active }">
+		<a [routerLink]="menu.url" routerLinkActive="active">
 			<span class="material-icons-sharp"> {{ menu.icon }} </span>
 			<h4>{{ menu.name }}</h4>
 		</a>

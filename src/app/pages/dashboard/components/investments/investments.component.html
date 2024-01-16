@@ -1,0 +1,30 @@
+<div class="investments">
+	<div class="header">
+		<h2>Investimentos</h2>
+		<a href="#"
+			>Mais <span class="material-icons-sharp"> chevron_right </span></a
+		>
+	</div>
+
+	@for(investment of INVESTMENTS; track $index) {
+	<div class="investment">
+		<img src="/assets/images/{{ investment.icon }}" />
+		<h4>{{ investment.name }}</h4>
+		<div class="date-time">
+			<p>{{ investment.date }}</p>
+			<small class="text-muted">{{ investment.time }}</small>
+		</div>
+		<div class="bonds">
+			<p>{{ investment.bonds }}</p>
+			<small class="text-muted">Bonds</small>
+		</div>
+		<div class="amount">
+			<h4>R$ {{ investment.value }}</h4>
+			<small
+				[ngClass]="investment.percentAmount >= 0 ? 'success' : 'danger'"
+				>{{investment.percentAmount >= 0 ? "+" : ""}}{{ investment.percentAmount }}%</small
+			>
+		</div>
+	</div>
+	}
+</div>

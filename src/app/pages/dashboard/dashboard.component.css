@@ -1,3 +1,9 @@
+.app-dashboard {
+	display: grid;
+	grid-template-columns: auto 30rem;
+	gap: 2rem;
+}
+
 section.middle .header {
 	display: flex;
 	align-items: center;
@@ -29,7 +35,7 @@ section.middle .cards .card {
 	justify-content: space-between;
 	box-shadow: 0 2rem 3rem var(--color-danger-light);
 	transition: all 300 ease;
-	max-width: 24rem;
+	min-width: 22rem;
 }
 
 section.middle .cards .card:nth-child(2) {

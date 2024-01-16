@@ -1,16 +1,18 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 interface MenuItem {
 	name: string;
 	icon: string;
 	active?: boolean;
+	url?: string;
 }
 
 @Component({
 	selector: 'app-sidebar',
 	standalone: true,
-	imports: [CommonModule],
+	imports: [CommonModule, RouterModule],
 	templateUrl: './sidebar.component.html',
 	styleUrl: './sidebar.component.css',
 })
@@ -20,6 +22,7 @@ export class SidebarComponent {
 			name: 'Dashboard',
 			icon: 'dashboard',
 			active: true,
+			url: 'dashboard'
 		},
 		{
 			name: 'Exchange',
@@ -28,6 +31,7 @@ export class SidebarComponent {
 		{
 			name: 'Carteira',
 			icon: 'account_balance_wallet',
+			url: 'wallet'
 		},
 		{
 			name: 'Transações',
