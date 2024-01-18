@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component} from '@angular/core';
 import { CryptorChartComponent } from '../../core/charts/cryptor-chart/cryptor-chart.component';
 import { InvestmentsComponent } from './components/investments/investments.component';
+import { RecentsTransactionsComponent } from './components/recents-transactions/recents-transactions.component';
 
 interface CartCurrency {
 	iconCurrency: string;
@@ -29,7 +30,7 @@ interface FastPayment {
 @Component({
 	selector: 'app-dashboard',
 	standalone: true,
-	imports: [CommonModule, CryptorChartComponent, InvestmentsComponent],
+	imports: [CommonModule, CryptorChartComponent, InvestmentsComponent, RecentsTransactionsComponent],
 	templateUrl: './dashboard.component.html',
 	styleUrl: './dashboard.component.css',
 })
