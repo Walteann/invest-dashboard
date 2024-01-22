@@ -5,3 +5,11 @@ main {
 	width: 96%;
 	margin: 1rem auto 4rem;
 }
+
+/* MEDIA QUERIES FOR TABLET */
+@media screen and (max-width: 1024px) {
+
+	main {
+		grid-template-columns: 1fr;
+	}
+}

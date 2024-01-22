@@ -89,3 +89,33 @@ nav .profile-area button {
 	display: none;
 }
 
+/* MEDIA QUERIES FOR TABLETS */
+
+@media screen and (max-width: 1024px) {
+	nav .search-bar {
+		display: none;
+	}
+
+	nav .profile-area {
+		gap: 2rem;
+	}
+
+	nav .profile-area button#menu-btn {
+		display: inline;
+		background: transparent;
+		color: var(--color-dark);
+	}
+}
+
+/* MEDIA QUERIES FOR MOBILE PHONES */
+
+@media screen and (max-width: 600px) {
+	nav .profile-area {
+		gap: 2.6rem;
+	}
+
+	nav .profile h5,
+	nav .profile span {
+		display: none;
+	}
+}

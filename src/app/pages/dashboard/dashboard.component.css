@@ -167,3 +167,32 @@ section.middle .card .bottom .right {
 	gap: 2rem;
 	align-self: center;
 }
+
+/* MEDIA QUERIES FOR TABLETS */
+@media screen and (max-width: 1024px) {
+
+	.app-dashboard {
+		grid-template-columns: 1fr;
+	}
+
+	section.middle .cards {
+		grid-template-columns: 1fr 1fr;
+	}
+
+}
+
+/* MEDIA QUERIES FOR MOBILE PHONES */
+
+@media screen and (max-width: 600px) {
+
+	section.middle .cards {
+		grid-template-columns: 1fr;
+	}
+
+	.fast-payment {
+		flex-direction: column;
+		align-items: flex-start;
+		margin-top: 3rem;
+		gap: 1.4rem;
+	}
+}
