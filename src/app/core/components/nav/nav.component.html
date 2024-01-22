@@ -6,9 +6,9 @@
 			<input type="search" placeholder="Buscar"/>
 		</div>
 		<div class="profile-area">
-			<div class="theme-btn">
-				<span class="material-icons-sharp active"> light_mode </span>
-				<span class="material-icons-sharp"> dark_mode </span>
+			<div class="theme-btn" (click)="changeTheme()">
+				<span class="material-icons-sharp active" #lightMode> light_mode </span>
+				<span class="material-icons-sharp" #darkMode> dark_mode </span>
 			</div>
 			<div class="profile">
 				<div class="profile-photo">

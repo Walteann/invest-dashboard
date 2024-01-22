@@ -26,6 +26,15 @@
 	--border-radius-2: 6px;
 }
 
+/*  DARK THEME VARIABLES */
+.dark-theme {
+	--color-white: #131316;
+	--color-light: #23232A;
+	--color-dark: #DDDDDD;
+	--color-gray-dark: #ADACB5;
+	--color-primary: #efe3e3;
+}
+
 * {
 	margin: 0;
 	padding: 0;
