@@ -86,13 +86,20 @@ aside .updates a:hover {
 	aside {
 		position: fixed;
 		top: 0;
-		left: 0;
+		left: -100%;
 		z-index: 3;
 		background: var(--color-white);
 		width: 22rem;
 		height: 100vh;
 		box-shadow: 2rem 0 2rem var(--color-primary-light);
 		display: none;
+		animation: showSidebar 500ms ease forwards;
+	}
+
+	@keyframes showSidebar {
+		to {
+			left: 0;
+		}
 	}
 
 	aside button#close-btn {

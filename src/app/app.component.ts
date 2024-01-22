@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 import { NavComponent } from './core/components/nav/nav.component';
 import { SidebarComponent } from './core/components/sidebar/sidebar.component';
 
@@ -17,5 +17,4 @@ import { SidebarComponent } from './core/components/sidebar/sidebar.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'invest-dashboard';
 }

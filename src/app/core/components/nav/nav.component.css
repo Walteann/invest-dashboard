@@ -105,6 +105,10 @@ nav .profile-area button {
 		background: transparent;
 		color: var(--color-dark);
 	}
+
+	button:hover {
+		cursor: pointer;
+	}
 }
 
 /* MEDIA QUERIES FOR MOBILE PHONES */
