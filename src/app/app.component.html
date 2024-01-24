@@ -1,8 +1,16 @@
-<app-nav></app-nav>
-<main>
-	<app-sidebar></app-sidebar>
-	<section>
-		<router-outlet></router-outlet>
-	</section>
+@defer (on timer(5000)) {
+	<app-nav></app-nav>
+	<main>
+		<app-sidebar></app-sidebar>
+		<section>
+			<router-outlet></router-outlet>
+		</section>
 
-</main>
+	</main>
+
+} @placeholder {
+
+	<div >
+		<app-splash-screen class="loadingBox"></app-splash-screen>
+	</div>
+}

@@ -1,0 +1,40 @@
+
+
+  svg {
+	width: 150px;
+	height: 150px;
+  }
+
+  #countdown-circle {
+	fill: none;
+	stroke: #FF4336; /* Cor laranja */
+	stroke-width: 10;
+	stroke-dasharray: 440;
+	stroke-dashoffset: 440;
+	animation: dash 5s linear forwards;
+  }
+
+  #loading-text {
+	font-size: 16px;
+	text-anchor: middle;
+	dominant-baseline: middle;
+	fill: #FF4336; /* Cor laranja */
+	font-weight: bold;
+	font-family: sans-serif;
+	margin-top: 100px;
+  }
+
+  @keyframes dash {
+	to {
+	  stroke-dashoffset: 0;
+	}
+  }
+
+  @keyframes blink {
+	0%, 100% {
+	  fill: transparent;
+	}
+	50% {
+	  fill: #FF4336;
+	}
+  }

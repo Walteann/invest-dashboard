@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavComponent } from './core/components/nav/nav.component';
 import { SidebarComponent } from './core/components/sidebar/sidebar.component';
+import { SplashScreenComponent } from './core/components/splash-screen/splash-screen.component';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,8 @@ import { SidebarComponent } from './core/components/sidebar/sidebar.component';
 	CommonModule,
 	RouterOutlet,
 	NavComponent,
-	SidebarComponent
+	SidebarComponent,
+	SplashScreenComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

@@ -30,7 +30,7 @@ interface FastPayment {
 @Component({
 	selector: 'app-dashboard',
 	standalone: true,
-	imports: [CommonModule, CryptorChartComponent, InvestmentsComponent, RecentsTransactionsComponent, ],
+	imports: [CommonModule, CryptorChartComponent, InvestmentsComponent, RecentsTransactionsComponent],
 	templateUrl: './dashboard.component.html',
 	styleUrl: './dashboard.component.css',
 })
