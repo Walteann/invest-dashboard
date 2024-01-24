@@ -4,6 +4,25 @@ import { CryptorService } from '../../../shared/http/cryptor.service';
 import { HttpClientModule } from '@angular/common/http';
 import { forkJoin } from 'rxjs';
 
+const MOCK_CHAT_CRYPTOR = {
+	months: [
+		'Jan',
+		'Fev',
+		'Mar',
+		'Abr',
+		'Mai',
+		'Jun',
+		'Jul',
+		'Ago',
+		'Set',
+		'Out',
+		'Nov',
+		'Dez',
+	],
+	BTC: [29374, 33537, 49631, 59095, 57095, 57828, 36684, 33572, 39974, 48847, 48116, 61004],
+	ETH: [31500, 4100, 88800, 26000, 46000, 32698, 5000, 3000, 18656, 24832, 36844],
+}
+
 @Component({
 	selector: 'app-cryptor-chart',
 	templateUrl: './cryptor-chart.component.html',
@@ -37,6 +56,11 @@ export class CryptorChartComponent implements AfterViewInit {
 			);
 		}, err=> {
 			console.error(err);
+			this.createChart(
+				MOCK_CHAT_CRYPTOR.months,
+				MOCK_CHAT_CRYPTOR.BTC,
+				MOCK_CHAT_CRYPTOR.ETH
+			);
 		});
 	}
 
