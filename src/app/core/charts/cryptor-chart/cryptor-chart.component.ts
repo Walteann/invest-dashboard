@@ -2,7 +2,7 @@ import { AfterViewInit, Component, ElementRef } from '@angular/core';
 import { Chart, registerables } from 'chart.js';
 import { CryptorService } from '../../../shared/http/cryptor.service';
 import { HttpClientModule } from '@angular/common/http';
-import { forkJoin } from 'rxjs';
+import { Subscription, forkJoin } from 'rxjs';
 
 const MOCK_CHAT_CRYPTOR = {
 	months: [
@@ -32,6 +32,7 @@ const MOCK_CHAT_CRYPTOR = {
 })
 export class CryptorChartComponent implements AfterViewInit {
 	private chart: any;
+	private subscription: Subscription;
 
 	constructor(
 		private el: ElementRef,
@@ -45,7 +46,7 @@ export class CryptorChartComponent implements AfterViewInit {
 
 	// TODO: Trocar por Signs
 	private getCryptors(): void {
-		forkJoin([
+		this.subscription = forkJoin([
 			this.cryptorService.getCryptorPriceChart('bitcoin'),
 			this.cryptorService.getCryptorPriceChart('ethereum'),
 		]).subscribe(([bitcoin, ethereum]: [any, any]) => {
